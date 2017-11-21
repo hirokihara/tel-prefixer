@@ -1,0 +1,11 @@
+<h2>プレフィックス付き番号作成</h2>
+<div class="tel-box">
+  <input type="text" [(ngModel)]="tel" class="tel">
+  <input type="button" (click)="generate()" value="作成" class="button">
+</div>
+
+<div class="fixtel-box">
+  <span>電話番号：</span>
+  <a href="tel:{{fixtel}}" class="fixtel">{{fixtel}}</a>
+</div>
+

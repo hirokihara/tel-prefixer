@@ -1,0 +1,11 @@
+<h2>プレフィックス生成ページリンク作成</h2>
+<div class="prefix-box">
+  <input type="text" [(ngModel)]="prefix" class="prefix">
+  <input type="button" (click)="generate()" value="作成" class="button">
+</div>
+
+<div class="url-box">
+  <span>URL：</span>
+  <a href="{{url}}" class="url">{{url}}</a>
+</div>
+
