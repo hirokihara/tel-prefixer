@@ -34,7 +34,7 @@ export class GenerateComponent implements OnInit {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 
-    wTel = wTel.replace( /[-‐－―ー–-➖]/g , '' );
+    wTel = wTel.replace(/[^0-9]/g, '');
     this.fixtel = this.prefix + wTel;
   }
 }
