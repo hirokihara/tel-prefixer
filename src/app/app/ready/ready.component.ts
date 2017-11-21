@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location }   from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-ready',
@@ -18,18 +18,18 @@ export class ReadyComponent implements OnInit {
 
   generate() {
     console.log('generate!!!');
-    var wTel = this.prefix;
-    //10進数の場合
+    let wTel = this.prefix;
+    // 10進数の場合
     wTel = wTel.replace(/[Ａ-Ｚａ-ｚ０-９ー]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
 
-    //16進数の場合
+    // 16進数の場合
     wTel = wTel.replace(/[Ａ-Ｚａ-ｚ０-９ー]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 
     wTel = wTel.replace( /[‐－―]/g , '' );
-    this.url = location.origin  + "/generate/" + wTel;
+    this.url = location.toString().replace('ready', 'generate/') + wTel;
   }
 }

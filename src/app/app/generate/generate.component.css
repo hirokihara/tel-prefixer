@@ -4,8 +4,7 @@
 
 .fixtel-box {
     margin-top: 30px;
-    display: flex;
-    font-size:1.5em;
+    font-size:1.2em;
     font-family:Arial, sans-serif;
 }
 
@@ -17,7 +16,7 @@
     color:#333;
     border:solid 1px #ccc;
     /*margin:0 0 20px;*/
-    width:300px;
+    width:200px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -27,7 +26,7 @@
 }
 
 .button {
-    min-width: 100px;
+    min-width: 60px;
     margin-left: 5px;
     font-size:1.3em;
     font-family:Arial, sans-serif;

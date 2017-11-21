@@ -23,18 +23,18 @@ export class GenerateComponent implements OnInit {
 
   generate() {
     console.log('generate!!!');
-    var wTel = this.tel;
-    //10進数の場合
+    let wTel = this.tel;
+    // 10進数の場合
     wTel = wTel.replace(/[Ａ-Ｚａ-ｚ０-９ー]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
 
-    //16進数の場合
+    // 16進数の場合
     wTel = wTel.replace(/[Ａ-Ｚａ-ｚ０-９ー]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 
-    wTel = wTel.replace( /[‐－―]/g , '' );
+    wTel = wTel.replace( /[-‐－―]/g , '' );
     this.fixtel = this.prefix + wTel;
   }
 }
