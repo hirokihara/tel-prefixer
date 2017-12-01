@@ -1,6 +1,9 @@
 <h2>プレフィックス生成ページリンク作成</h2>
+
+プレフィックス生成ページを作成します。<br>
+プレフィックス番号を入力してください。
 <div class="prefix-box">
-  <input type="text" [(ngModel)]="prefix" class="prefix">
+  <input type="tel" [(ngModel)]="prefix" class="prefix">
   <input type="button" (click)="generate()" value="作成" class="button">
 </div>
 
